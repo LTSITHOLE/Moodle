@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNISA Student Help - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans bg-gray-100 text-gray-800">
+    <div class="flex flex-col md:flex-row">
+      <!-- Main Content -->
+      <main class="flex-grow p-8">
+        <h2 class="text-3xl font-bold mb-6">Welcome to Your Dashboard</h2>
+        <div class="flex flex-col md:flex-row gap-6">
+          <!-- Previous Requests -->
+          <div class="bg-white rounded-lg shadow-md p-6 w-full">
+            <h3 class="text-xl font-semibold mb-4">Your Previous Requests</h3>
+            <div id="previous-requests">
+              <!-- Previous requests will be dynamically inserted here -->
+            </div>
+          </div>
+
+          <!-- Submit Request Form -->
+          <div class="bg-white rounded-lg shadow-md p-6 w-full">
+            <h3 class="text-xl font-semibold mb-4">Submit your Request</h3>
+            <form id="help-request-form">
+              <input
+                type="text"
+                id="fullName"
+                placeholder="Full Name"
+                class="w-full p-2 mb-4 border border-gray-300 rounded"
+              />
+              <input
+                type="text"
+                id="whatsapp"
+                placeholder="WhatsApp Contact"
+                class="w-full p-2 mb-4 border border-gray-300 rounded"
+              />
+              <textarea
+                id="modules"
+                placeholder="List of modules (one per line) e.g ENG1501-EXAM MATH1502-ASSIGNMENT 2"
+                class="w-full p-2 mb-4 border border-gray-300 rounded h-32"
+              ></textarea>
+              <button
+                type="submit"
+                class="w-full p-2 bg-black text-white rounded hover:bg-blue-700"
+              >
+                Submit Request
+              </button>
+            </form>
+          </div>
+
+          <!-- Small screen menu-->
+          <div class="flex flex-col p-3 shadow m-2 md:flex-reverse">
+            <h1 class="mb-3 mt-2">Menu</h1>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <a
+                  href="dashboard.html"
+                  class="block py-3 px-6 bg-black text-white rounded-md p-3 hover:bg-gray-600 transition"
+                >
+                  Dashboard
+                </a>
+              </li>
+
+              <button
+                onclick="signOut()"
+                class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-red-700 bottom-0"
+              >
+                Sign Out
+              </button>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.2/firebase-app-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.2/firebase-auth-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.2/firebase-firestore-compat.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

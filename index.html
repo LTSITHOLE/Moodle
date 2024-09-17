@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNISA Student Plugs - Assignment and Exam Assistance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans bg-black text-gray-800">
+    <!-- Full-screen Hero Section -->
+    <header
+      class="bg-black text-white min-h-screen flex flex-col justify-center"
+    >
+      <div class="container mx-auto px-4 py-16">
+        <div
+          class="flex flex-col gap-12 justify-center text-center items-center"
+        >
+          <div>
+            <h1 class="text-3xl font-bold md:text-8xl font-bold mb-3">
+              UNISA <span class="text-green-600">Moodle</span>
+            </h1>
+            <p class="text-sm  ">
+              Get expert assistance with your assignments and examinations.
+            </p>
+          </div>
+          <div>
+
+
+            <div class="bg-white p-5 rounded-lg shadow-md">
+              <h2 class="text-md font-bold mb-4 text-gray-800">
+                Register or Log in
+              </h2>
+              <div id="auth-container ">
+                <div class="flex flex-col md:flex-row md:gap-3">
+                  <input
+                  type="email"
+                  id="email"
+                  required
+                  placeholder="Email"
+                  class="w-full text-black p-2 mb-4 border border-gray-300 rounded"
+                />
+                <input
+                  type="password"
+                  id="password"
+                  required
+                  placeholder="Password"
+                  class="w-full text-black p-2 mb-4 border border-gray-300 rounded"
+                />
+                </div>
+               <div class="flex gap-2 p-3">
+                <button
+                onclick="signIn()"
+                class="w-full font-bold p-2 border bg-black text-white  border-black rounded-md text-black  rounded hover:bg-gray-900"
+              >
+                Login
+              </button>
+              <button
+                onclick="signUp()"
+                class="w-full font-bold p-2 border  border-black rounded-md text-black  rounded hover:bg-gray-300"
+              >
+                Register
+              </button>
+               </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="flex flex-col md:flex-row md:gap-3 text-start mb-3 md:text-center">
+            <p>✅ 100% Bypass Turnitin</p>
+            <p>✅ Retrive plug within 20 minutes.</p>
+            <p>✅ Unlimited Revision.</p>
+            <p>✅ Whatsapp support.</p>
+            <p>✅ Distinction or FULL REFUND.</p>
+            
+          </div>
+
+          <div class="flex flex-col md:flex-row md:gap-5  w-full items-center justify-center">
+
+            <div class="flex flex-col bg-opacity-10 p-5 rounded-md bg-gray-400 py- mb-3 text-center w-full">
+              <h1 class="text-xl md:text-2xl font-bold">Students</h1>
+              <p class="text-lg text-green-600 font-bold mt-3"> <span class="text-2xl">👨‍🎓</span> 200K+</p>
+            </div>
+            <div class="flex flex-col bg-opacity-10 p-5  rounded-md bg-gray-400 mb-3 w-full">
+              <h1 class="text-xl md:text-2xl font-bold">Assignments</h1>
+              <p class="text-lg text-green-600 font-bold mt-3"> <span class="text-2xl">📝</span> 3M+</p>
+            </div>
+  
+            <div class="flex flex-col bg-opacity-10 p-5  rounded-md bg-gray-400 mb-3 w-full">
+              <h1 class="text-xl md:text-2xl font-bold">Tutors & Mentors</h1>
+              <p class="text-lg text-green-600 font-bold mt-3"> <span class="text-2xl">👨‍🏫</span> 10k +</p>
+            </div>
+            </div>
+
+          <div>
+            <h1 class="text-center text-3xl p-3 font-bold mb-3">Testimonials😀</h1>
+          <div class="flex flex-col md:flex-row md:gap-3">
+            <!-- Short Testimonial -->
+          <div class="bg-white bg-opacity-10 p-4 rounded-lg mb-8">
+            <p class="italic mb-2">
+              "UNISA Moodle transformed my academic journey. Their expert
+              assistance helped me excel in my studies!"
+              
+            </p>
+            <p class="text-center mb-2">⭐⭐⭐⭐⭐ </p>
+            <p class="font-semibold">- Sarah M., UNISA Graduate</p>
+          </div>
+
+          <div class="bg-white bg-opacity-10 p-4 rounded-lg mb-8">
+            <p class="italic mb-2">
+              "I am working in retail and i do not have time to do my assignments. UNISA moodle come throught for me everytime i need them.."
+              
+            </p>
+            <p class="text-center mb-2">⭐⭐⭐⭐⭐ </p>
+            <p class="font-semibold">- Dikeledi KM., UNISA Graduate</p>
+          </div>
+
+          <div class="bg-white bg-opacity-10 p-4 rounded-lg mb-8">
+            <p class="italic mb-2">
+              "I graduated with 28 distinctions out of 30 modules for my Diploma.My life changed extremely by UNISA Moodle.I am so greateful."
+              
+            </p>
+            <p class="text-center mb-2">⭐⭐⭐⭐⭐ </p>
+            <p class="font-semibold">- Themba DV, UNISA Graduate</p>
+          </div>
+
+          
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Rest of the page content... -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.2/firebase-app-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.2/firebase-auth-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.2/firebase-firestore-compat.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
